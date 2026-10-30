@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stars de Saywyz</title>
+<meta name="description" content="Une sélection de repos GitHub, rangés par thème.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='%23e3b341' d='M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z'/></svg>">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #59636e;
+    --accent: #0969da;
+    --star: #9a6700;
+    --chip-on: #1f2328;
+    --chip-on-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --surface: #151b23;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #9198a1;
+      --accent: #4493f8;
+      --star: #e3b341;
+      --chip-on: #e6edf3;
+      --chip-on-text: #0d1117;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 120px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 32px 0 12px; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
+  .tagline { margin: 4px 0 0; color: var(--muted); }
+
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .search { position: relative; }
+  .search input {
+    width: 100%;
+    padding: 9px 40px 9px 12px;
+    font: inherit;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+  }
+  .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+  .search kbd {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    font: 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px;
+  }
+  .chips { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none;
+    font: 13px/1 inherit; font-family: inherit;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    background: var(--bg);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .chip span { color: var(--muted); margin-left: 4px; }
+  .chip:hover { border-color: var(--muted); }
+
+  section { padding-top: 28px; }
+  h2 { font-size: 17px; margin: 0 0 12px; display: flex; align-items: baseline; gap: 8px; }
+  h2 small { color: var(--muted); font-weight: 400; font-size: 13px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+  .card {
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+    background: var(--bg);
+    transition: border-color .12s, background .12s;
+  }
+  .card:hover { border-color: var(--accent); background: var(--surface); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .name { font-weight: 600; color: var(--accent); overflow-wrap: anywhere; }
+  .name .owner { font-weight: 400; color: var(--muted); }
+  .note { margin: 0; color: var(--text); font-size: 14px; flex: 1; }
+  .meta { display: flex; gap: 14px; color: var(--muted); font-size: 12.5px; }
+  .meta .stars { color: var(--star); }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+
+  .empty { color: var(--muted); padding: 40px 0; text-align: center; }
+  footer { color: var(--muted); font-size: 13px; padding: 40px 0 32px; }
+  footer a { color: var(--accent); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <header class="wrap">
+    <h1 id="title">Stars</h1>
+    <p class="tagline" id="tagline"></p>
+  </header>
+
+  <div class="bar">
+    <div class="wrap">
+      <label class="search">
+        <input id="q" type="search" placeholder="Rechercher un repo, un sujet, un langage…" autocomplete="off" aria-label="Rechercher">
+        <kbd>/</kbd>
+      </label>
+      <nav class="chips" id="chips" aria-label="Thèmes"></nav>
+    </div>
+  </div>
+
+  <main class="wrap" id="list"></main>
+  <p class="wrap empty" id="empty" hidden>Aucun repo ne correspond.</p>
+
+  <footer class="wrap" id="footer"></footer>
+
+<script>
+const LANG = {
+  Python: "#3572A5", TypeScript: "#3178c6", JavaScript: "#f1e05a", Java: "#b07219",
+  "C++": "#f34b7d", "C#": "#178600", C: "#555555", Go: "#00ADD8", Rust: "#dea584",
+  "Jupyter Notebook": "#DA5B0B", CSS: "#563d7c", SCSS: "#c6538c", HTML: "#e34c26",
+  PHP: "#4F5D95", Shell: "#89e051", Swift: "#F05138", Kotlin: "#A97BFF"
+};
+const fmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+async function load() {
+  const [cfg, stars] = await Promise.all([
+    fetch("data/themes.json").then(r => r.json()),
+    fetch("data/stars.json").then(r => r.json()).catch(() => [])
+  ]);
+  const byRepo = new Map(stars.map(s => [s.repo.toLowerCase(), s]));
+  const themes = cfg.themes.map(t => ({
+    name: t.name,
+    repos: t.repos.map(r => ({ ...byRepo.get(r.repo.toLowerCase()), ...r }))
+  }));
+
+  document.title = cfg.title;
+  document.getElementById("title").textContent = cfg.title;
+  document.getElementById("tagline").textContent = cfg.tagline;
+  render(themes);
+}
+
+function card(r) {
+  const [owner, name] = r.repo.split("/");
+  const text = r.note || r.description || "";
+  const lang = r.language
+    ? `<span><i class="dot" style="background:${LANG[r.language] || "#8b949e"}"></i>${esc(r.language)}</span>` : "";
+  const st = r.stars != null ? `<span class="stars">★ ${fmt(r.stars)}</span>` : "";
+  const hay = [r.repo, r.note, r.description, r.language].join(" ").toLowerCase();
+  return `<a class="card" href="https://github.com/${esc(r.repo)}" target="_blank" rel="noopener" data-hay="${esc(hay)}">
+    <div class="name"><span class="owner">${esc(owner)} / </span>${esc(name)}</div>
+    ${text ? `<p class="note">${esc(text)}</p>` : ""}
+    <div class="meta">${st}${lang}</div>
+  </a>`;
+}
+
+function render(themes) {
+  const list = document.getElementById("list");
+  const chips = document.getElementById("chips");
+  list.innerHTML = themes.map(t => `
+    <section id="${slug(t.name)}" data-theme="${esc(t.name.toLowerCase())}">
+      <h2>${esc(t.name)} <small>${t.repos.length}</small></h2>
+      <div class="grid">${t.repos.map(card).join("")}</div>
+    </section>`).join("");
+  chips.innerHTML = themes.map(t =>
+    `<a class="chip" href="#${slug(t.name)}" data-for="${slug(t.name)}">${esc(t.name)}<span>${t.repos.length}</span></a>`).join("");
+
+  const total = themes.reduce((n, t) => n + t.repos.length, 0);
+  document.getElementById("footer").innerHTML =
+    `${total} repos · ${themes.length} thèmes`;
+
+  const q = document.getElementById("q");
+  const filter = () => {
+    const terms = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let any = false;
+    list.querySelectorAll("section").forEach(sec => {
+      let n = 0;
+      sec.querySelectorAll(".card").forEach(c => {
+        const hay = c.dataset.hay + " " + sec.dataset.theme;
+        const ok = terms.every(t => hay.includes(t));
+        c.hidden = !ok;
+        if (ok) n++;
+      });
+      sec.hidden = n === 0;
+      sec.querySelector("small").textContent = n;
+      const chip = chips.querySelector(`[data-for="${sec.id}"]`);
+      chip.hidden = n === 0;
+      chip.querySelector("span").textContent = n;
+      any ||= n > 0;
+    });
+    document.getElementById("empty").hidden = any;
+  };
+  q.addEventListener("input", filter);
+  q.addEventListener("keydown", e => {
+    if (e.key === "Escape") { q.value = ""; filter(); q.blur(); }
+    if (e.key === "Enter") { const first = list.querySelector(".card:not([hidden])"); if (first) window.open(first.href, "_blank"); }
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+  });
+}
+
+load();
+</script>
+</body>
+</html>
