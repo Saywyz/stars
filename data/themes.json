@@ -3,97 +3,92 @@
   "tagline": "Les repos GitHub que je garde sous la main, rangés par thème.",
   "themes": [
     {
+      "name": "Vidéo, audio & motion",
+      "repos": [
+        {
+          "repo": "heygen-com/hyperframes",
+          "note": "Écrire du HTML, obtenir une vidéo. Pensé pour les agents."
+        },
+        {
+          "repo": "feitangyuan/onetake",
+          "note": "Petits films motion en plan continu pour présenter un produit."
+        },
+        {
+          "repo": "SYSTRAN/faster-whisper",
+          "note": "Transcription Whisper jusqu'à 4× plus rapide (CTranslate2)."
+        },
+        {
+          "repo": "freemocap/freemocap",
+          "note": "Motion capture gratuite avec de simples webcams."
+        },
+        {
+          "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
+          "note": ""
+        }
+      ]
+    },
+    {
       "name": "Agents IA & Claude Code",
       "repos": [
-        { "repo": "NousResearch/hermes-agent", "note": "Agent IA open source qui apprend et garde sa mémoire au fil de l'usage." },
-        { "repo": "Graphify-Labs/graphify", "note": "Transforme un codebase (code, docs, SQL, PDF) en graphe de connaissances interrogeable." },
-        { "repo": "headroomlabs-ai/headroom", "note": "Compresse logs et sorties d'outils avant le LLM : ~20 % de tokens en moins." },
-        { "repo": "alirezarezvani/claude-skills", "note": "380 skills, agents et commandes prêts à l'emploi pour Claude Code." },
-        { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "note": "77 skills gamedev pour agents : Godot, Unity, Unreal, three.js, Bevy…" },
-        { "repo": "nicedreamzapp/claude-code-local", "note": "Faire tourner Claude Code 100 % en local sur Apple Silicon (MLX)." },
-        { "repo": "takaakit/superpowers-uml", "note": "Variante de Superpowers où l'agent conçoit en UML avant de coder." }
+        {
+          "repo": "NousResearch/hermes-agent",
+          "note": "Agent IA open source qui apprend et garde sa mémoire au fil de l'usage."
+        },
+        {
+          "repo": "Graphify-Labs/graphify",
+          "note": "Transforme un codebase (code, docs, SQL, PDF) en graphe de connaissances interrogeable."
+        },
+        {
+          "repo": "alirezarezvani/claude-skills",
+          "note": "380 skills, agents et commandes prêts à l'emploi pour Claude Code."
+        },
+        {
+          "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+          "note": "77 skills gamedev pour agents : Godot, Unity, Unreal, three.js, Bevy…"
+        },
+        {
+          "repo": "takaakit/superpowers-uml",
+          "note": "Variante de Superpowers où l'agent conçoit en UML avant de coder."
+        }
       ]
     },
     {
       "name": "Serveurs MCP",
       "repos": [
-        { "repo": "stickerdaniel/linkedin-mcp-server", "note": "Accès LinkedIn (profils, entreprises, offres) pour Claude et tout client MCP." },
-        { "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP", "note": "Piloter le montage Premiere Pro depuis un agent IA." },
-        { "repo": "Leonxlnx/earshot", "note": "Donne des oreilles aux agents : écouter, analyser et créer du son. CPU only." },
-        { "repo": "jeremie-lesage/zimbra-mcp", "note": "Mails, tags et agenda Zimbra via MCP." }
-      ]
-    },
-    {
-      "name": "Vidéo, audio & motion",
-      "repos": [
-        { "repo": "heygen-com/hyperframes", "note": "Écrire du HTML, obtenir une vidéo. Pensé pour les agents." },
-        { "repo": "feitangyuan/onetake", "note": "Petits films motion en plan continu pour présenter un produit." },
-        { "repo": "harry0703/MoneyPrinterTurbo", "note": "Génère une vidéo courte complète à partir d'un simple sujet." },
-        { "repo": "SYSTRAN/faster-whisper", "note": "Transcription Whisper jusqu'à 4× plus rapide (CTranslate2)." },
-        { "repo": "freemocap/freemocap", "note": "Motion capture gratuite avec de simples webcams." },
-        { "repo": "Nicovic17/vanish_webcam", "note": "Effet d'invisibilité en direct sur la webcam." }
-      ]
-    },
-    {
-      "name": "LLM & machine learning",
-      "repos": [
-        { "repo": "microsoft/BitNet", "note": "Framework officiel d'inférence pour les LLM 1-bit." },
-        { "repo": "FareedKhan-dev/train-llm-from-scratch", "note": "Entraîner son propre LLM de bout en bout, des données à la génération." },
-        { "repo": "MatthieuGHS/Perceptron2MNIST", "note": "Réseaux de neurones from scratch en NumPy, puis PyTorch, jusqu'à MNIST." },
-        { "repo": "handwrittenOCR/trocr_handwritten", "note": "OCR manuscrit TrOCR sur des archives françaises du XIXᵉ." }
-      ]
-    },
-    {
-      "name": "Vision : segmentation anime",
-      "repos": [
-        { "repo": "CartoonSegmentation/CartoonSegmentation", "note": "Segmentation d'instances de personnages anime + effets visuels." },
-        { "repo": "jerryli27/AniSeg", "note": "Faster R-CNN pour segmenter les personnages anime." },
-        { "repo": "pit-ray/Anime-Semantic-Segmentation-GAN", "note": "Segmentation sémantique d'illustrations anime par GAN." },
-        { "repo": "siyeong0/Anime-Face-Segmentation", "note": "Segmentation des visages de personnages anime." }
-      ]
-    },
-    {
-      "name": "Data",
-      "repos": [
-        { "repo": "evidentlyai/evidently", "note": "Évaluer, tester et monitorer modèles ML et LLM en prod." },
-        { "repo": "sodadata/messydata", "note": "Génère des données sales synthétiques pour tester ses pipelines." },
-        { "repo": "Noobzik/ATL-Datamart", "note": "TP d'architecture décisionnelle : datalake, ETL, data warehouse." }
+        {
+          "repo": "stickerdaniel/linkedin-mcp-server",
+          "note": "Accès LinkedIn (profils, entreprises, offres) pour Claude et tout client MCP."
+        },
+        {
+          "repo": "Leonxlnx/earshot",
+          "note": "Donne des oreilles aux agents : écouter, analyser et créer du son. CPU only."
+        },
+        {
+          "repo": "jeremie-lesage/zimbra-mcp",
+          "note": "Mails, tags et agenda Zimbra via MCP."
+        }
       ]
     },
     {
       "name": "Reverse engineering & sécurité",
       "repos": [
-        { "repo": "morluto/rea", "note": "Rétro-ingénierie avec des agents, du comportement d'une app aux binaires." },
-        { "repo": "skylot/jadx", "note": "Décompilateur Android : DEX/APK vers Java lisible." },
-        { "repo": "Z4nzu/hackingtool", "note": "Boîte à outils tout-en-un de pentest et CTF." }
-      ]
-    },
-    {
-      "name": "Jeux & mods",
-      "repos": [
-        { "repo": "hedge-dev/UnleashedRecomp", "note": "Portage PC non officiel de Sonic Unleashed (Xbox 360) par recompilation." },
-        { "repo": "thesupersonic16/HedgeModManager", "note": "Gestionnaire de mods pour les Sonic PC récents." }
+        {
+          "repo": "morluto/rea",
+          "note": "Rétro-ingénierie avec des agents, du comportement d'une app aux binaires."
+        },
+        {
+          "repo": "skylot/jadx",
+          "note": "Décompilateur Android : DEX/APK vers Java lisible."
+        }
       ]
     },
     {
       "name": "Web & front",
       "repos": [
-        { "repo": "knadh/oat", "note": "Librairie UI ultra-légère (~10 Ko), sans dépendance, HTML sémantique." },
-        { "repo": "Ileriayo/markdown-badges", "note": "La plus grosse collection de badges Markdown pour README et profils." },
-        { "repo": "Noobzik/Resume-Matcher", "note": "Analyse un CV face à une offre et suggère des mots-clés." }
-      ]
-    },
-    {
-      "name": "Portfolios & projets",
-      "repos": [
-        { "repo": "Saywyz/portofolio", "note": "Mon portfolio : travaux IT et IA." },
-        { "repo": "Saywyz/botai", "note": "Classification de bouteilles par vision." },
-        { "repo": "Xuan-Minh/glaneurs-main", "note": "Site du documentaire immersif et multilingue « Les Glaneurs de Carton »." },
-        { "repo": "Xuan-Minh/memoirecmw", "note": "Plateforme de suivi des mémoires étudiants / enseignants." },
-        { "repo": "Xuan-Minh/xmportfolio", "note": "Portfolio de Xuan-Minh." },
-        { "repo": "Xuan-Minh/hnmassengo_photo", "note": "Site photo." },
-        { "repo": "Xuan-Minh/poc_eventcaritatif", "note": "POC de site pour un événement caritatif." },
-        { "repo": "Xuan-Minh/Xuan-Minh", "note": "Profil GitHub de Xuan-Minh." }
+        {
+          "repo": "Noobzik/Resume-Matcher",
+          "note": "Analyse un CV face à une offre et suggère des mots-clés."
+        }
       ]
     }
   ]

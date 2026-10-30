@@ -1,82 +1,5 @@
 [
   {
-    "repo": "NousResearch/hermes-agent",
-    "description": "The agent that grows with you",
-    "language": "Python",
-    "stars": 258683,
-    "archived": false
-  },
-  {
-    "repo": "Graphify-Labs/graphify",
-    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-    "language": "Python",
-    "stars": 139069,
-    "archived": false
-  },
-  {
-    "repo": "headroomlabs-ai/headroom",
-    "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-    "language": "Python",
-    "stars": 78317,
-    "archived": false
-  },
-  {
-    "repo": "alirezarezvani/claude-skills",
-    "description": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
-    "language": "Python",
-    "stars": 29003,
-    "archived": false
-  },
-  {
-    "repo": "gamedev-skills/awesome-gamedev-agent-skills",
-    "description": "77 game-dev skills for AI coding agents — Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox. Portable SKILL.md Agent Skills (the format Anthropic launched as Claude Skills), with a router that loads the right skill for your engine and task. Runs in Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI and more.",
-    "language": "Python",
-    "stars": 5744,
-    "archived": false
-  },
-  {
-    "repo": "nicedreamzapp/claude-code-local",
-    "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server. 6 fighters incl. Muse-Glimmer 30B (now multimodal — reads images, abliterated), Gemma 4 31B, Qwen 3.5 122B (65 tok/s), DeepSeek V4 Flash (1M ctx). Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
-    "language": "Python",
-    "stars": 3397,
-    "archived": false
-  },
-  {
-    "repo": "takaakit/superpowers-uml",
-    "description": "Superpowers-UML modifies Superpowers to ensure a software development workflow in which AI agents design through UML modeling.",
-    "language": "JavaScript",
-    "stars": 12,
-    "archived": false
-  },
-  {
-    "repo": "stickerdaniel/linkedin-mcp-server",
-    "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
-    "language": "Python",
-    "stars": 4050,
-    "archived": false
-  },
-  {
-    "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
-    "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
-    "language": "TypeScript",
-    "stars": 783,
-    "archived": false
-  },
-  {
-    "repo": "Leonxlnx/earshot",
-    "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
-    "language": "Python",
-    "stars": 3270,
-    "archived": false
-  },
-  {
-    "repo": "jeremie-lesage/zimbra-mcp",
-    "description": "MCP (Model Context Protocol) server for Zimbra to manage emails, tags, and calendar.",
-    "language": "Python",
-    "stars": 5,
-    "archived": false
-  },
-  {
     "repo": "heygen-com/hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
@@ -88,13 +11,6 @@
     "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
     "language": "Python",
     "stars": 3513,
-    "archived": false
-  },
-  {
-    "repo": "harry0703/MoneyPrinterTurbo",
-    "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-    "language": "Python",
-    "stars": 136415,
     "archived": false
   },
   {
@@ -112,87 +28,59 @@
     "archived": false
   },
   {
-    "repo": "Nicovic17/vanish_webcam",
-    "description": null,
+    "repo": "NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 744,
+    "stars": 258683,
     "archived": false
   },
   {
-    "repo": "microsoft/BitNet",
-    "description": "Official inference framework for 1-bit LLMs",
-    "language": "C++",
-    "stars": 41350,
-    "archived": false
-  },
-  {
-    "repo": "FareedKhan-dev/train-llm-from-scratch",
-    "description": "A straightforward method for training your LLM, from downloading data to generating text.",
+    "repo": "Graphify-Labs/graphify",
+    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 13011,
+    "stars": 139069,
     "archived": false
   },
   {
-    "repo": "MatthieuGHS/Perceptron2MNIST",
-    "description": "Neural networks from scratch in NumPy, than using PyTorch, progressing from a single logistic neuron to a 2-layer MLP for binary classification and finally an MNIST digit classifier. Each notebook comes with a PDF explaining the math and the intuition behind the code,",
-    "language": "Jupyter Notebook",
+    "repo": "alirezarezvani/claude-skills",
+    "description": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+    "language": "Python",
+    "stars": 29003,
+    "archived": false
+  },
+  {
+    "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+    "description": "77 game-dev skills for AI coding agents — Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox. Portable SKILL.md Agent Skills (the format Anthropic launched as Claude Skills), with a router that loads the right skill for your engine and task. Runs in Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI and more.",
+    "language": "Python",
+    "stars": 5744,
+    "archived": false
+  },
+  {
+    "repo": "takaakit/superpowers-uml",
+    "description": "Superpowers-UML modifies Superpowers to ensure a software development workflow in which AI agents design through UML modeling.",
+    "language": "JavaScript",
+    "stars": 12,
+    "archived": false
+  },
+  {
+    "repo": "stickerdaniel/linkedin-mcp-server",
+    "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
+    "language": "Python",
+    "stars": 4050,
+    "archived": false
+  },
+  {
+    "repo": "Leonxlnx/earshot",
+    "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
+    "language": "Python",
+    "stars": 3270,
+    "archived": false
+  },
+  {
+    "repo": "jeremie-lesage/zimbra-mcp",
+    "description": "MCP (Model Context Protocol) server for Zimbra to manage emails, tags, and calendar.",
+    "language": "Python",
     "stars": 5,
-    "archived": false
-  },
-  {
-    "repo": "handwrittenOCR/trocr_handwritten",
-    "description": "A case study from Marie Beigelman's thesis using 19th Century French Archives",
-    "language": "Python",
-    "stars": 18,
-    "archived": false
-  },
-  {
-    "repo": "CartoonSegmentation/CartoonSegmentation",
-    "description": "Instance segmentation for cartoon/anime characters and some visual techniques building around it.",
-    "language": "Jupyter Notebook",
-    "stars": 205,
-    "archived": false
-  },
-  {
-    "repo": "jerryli27/AniSeg",
-    "description": "A faster-rcnn model for anime character segmentation.",
-    "language": "Python",
-    "stars": 209,
-    "archived": false
-  },
-  {
-    "repo": "pit-ray/Anime-Semantic-Segmentation-GAN",
-    "description": "This repository was implemented to perform semantic segmentation for pixiv anime illust.",
-    "language": "Python",
-    "stars": 66,
-    "archived": false
-  },
-  {
-    "repo": "siyeong0/Anime-Face-Segmentation",
-    "description": "Anime character face segmentation",
-    "language": "Python",
-    "stars": 45,
-    "archived": false
-  },
-  {
-    "repo": "evidentlyai/evidently",
-    "description": "Evidently is ​​an open-source ML and LLM observability framework. Evaluate, test, and monitor any AI-powered system or data pipeline. From tabular data to Gen AI. 100+ metrics.",
-    "language": "Jupyter Notebook",
-    "stars": 8024,
-    "archived": false
-  },
-  {
-    "repo": "sodadata/messydata",
-    "description": "Synthetic dirty data generator",
-    "language": "Python",
-    "stars": 37,
-    "archived": false
-  },
-  {
-    "repo": "Noobzik/ATL-Datamart",
-    "description": "TP d'architecture décisionnel à destination des étudiants de l'EPSI et DC Paris. Le but est de déployer une architecture data dès la récupération de la donnée vers la restitution sous la forme de dataviz en passant par un Datalake, Data Warehouse et d'un Data Mart",
-    "language": "Python",
-    "stars": 6,
     "archived": false
   },
   {
@@ -210,41 +98,6 @@
     "archived": false
   },
   {
-    "repo": "Z4nzu/hackingtool",
-    "description": "ALL IN ONE Hacking Tool For Hackers",
-    "language": "Python",
-    "stars": 81520,
-    "archived": false
-  },
-  {
-    "repo": "hedge-dev/UnleashedRecomp",
-    "description": "An unofficial PC port of the Xbox 360 version of Sonic Unleashed created through the process of static recompilation.",
-    "language": "C++",
-    "stars": 5313,
-    "archived": false
-  },
-  {
-    "repo": "thesupersonic16/HedgeModManager",
-    "description": "A mod manager for Sonic Generations, Sonic Lost World, Sonic Forces, Sonic Colours Ultimate and other PC Hedgehog Engine games.",
-    "language": "C#",
-    "stars": 503,
-    "archived": false
-  },
-  {
-    "repo": "knadh/oat",
-    "description": "Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library. ~10KB min+gz.",
-    "language": "CSS",
-    "stars": 5571,
-    "archived": false
-  },
-  {
-    "repo": "Ileriayo/markdown-badges",
-    "description": "The largest curated collection of markdown badges for your personal developer branding, profile, and projects.",
-    "language": "SCSS",
-    "stars": 17162,
-    "archived": false
-  },
-  {
     "repo": "Noobzik/Resume-Matcher",
     "description": "Improve your resumes with Resume Matcher. Get insights, keyword suggestions and tune your resumes to job descriptions. ",
     "language": "TypeScript",
@@ -252,59 +105,10 @@
     "archived": false
   },
   {
-    "repo": "Saywyz/portofolio",
-    "description": "Personnal work over IT & AI",
-    "language": "JavaScript",
-    "stars": 2,
-    "archived": false
-  },
-  {
-    "repo": "Saywyz/botai",
-    "description": "Work on bottle classification",
-    "language": "JavaScript",
-    "stars": 2,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/glaneurs-main",
-    "description": "Ce projet est le site web d'un documentaire immersif et multilingue, \"Les Glaneurs de Carton\". Il a été conçu avec un fort accent sur l'expérience utilisateur, les animations fluides et une architecture web moderne.",
-    "language": "JavaScript",
-    "stars": 6,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/memoirecmw",
-    "description": "Plateforme web de gestion et de suivi des mémoires pour étudiants et enseignants.",
-    "language": "PHP",
-    "stars": 5,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/xmportfolio",
-    "description": null,
-    "language": "JavaScript",
-    "stars": 2,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/hnmassengo_photo",
-    "description": null,
-    "language": "JavaScript",
-    "stars": 4,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/poc_eventcaritatif",
-    "description": null,
-    "language": "JavaScript",
-    "stars": 1,
-    "archived": false
-  },
-  {
-    "repo": "Xuan-Minh/Xuan-Minh",
-    "description": null,
-    "language": null,
-    "stars": 4,
+    "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
+    "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
+    "language": "TypeScript",
+    "stars": 783,
     "archived": false
   }
 ]
