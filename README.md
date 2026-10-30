@@ -4,26 +4,20 @@ Une sélection de repos GitHub, rangés par thème : **https://saywyz.github.io/
 
 ## Comment ça marche
 
-- `data/themes.json` : la sélection. Seuls les repos listés ici apparaissent sur la page. C'est le seul fichier à éditer.
-- `data/stars.json` : étoiles, langage et description des repos sélectionnés, rafraîchis chaque jour par l'action [Sync stars](.github/workflows/sync-stars.yml).
+- `data/themes.json` : la sélection. Seuls les repos listés ici apparaissent sur la page.
+- `data/stars.json` : étoiles, langage et description des repos sélectionnés.
 
-## Ajouter un repo
+Les deux fichiers sont écrits par mon artefact d'admin dans Claude : il liste toutes mes stars, je choisis lesquelles afficher et dans quel thème, puis « Publier sur le site » fait un commit ici.
 
-Dans `data/themes.json`, ajouter une ligne au thème voulu (ou créer un thème) :
+On peut aussi éditer `data/themes.json` à la main :
 
 ```json
 { "repo": "owner/nom", "note": "Ce que fait le repo, en une phrase." }
 ```
 
-Pour retrouver tes stars pas encore classées (rien n'est publié) :
-
-```bash
-node scripts/sync-stars.mjs --new
-```
-
 ## En local
 
 ```bash
-node scripts/sync-stars.mjs      # rafraîchit data/stars.json
-python -m http.server 8000       # puis http://localhost:8000
+node scripts/sync-stars.mjs --new   # liste les stars qui ne sont pas encore sur le site
+python -m http.server 8000          # puis http://localhost:8000
 ```
