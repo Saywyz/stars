@@ -6,158 +6,205 @@
 <title>Stars de Saywyz</title>
 <meta name="description" content="Une sélection de repos GitHub, rangés par thème.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='%23e3b341' d='M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+  /* Une étagère de repos : en-tête éditorial, barre de filtres collante, catégories en accordéon de cartes. */
   :root {
-    --bg: #ffffff;
-    --surface: #f6f8fa;
-    --border: #d0d7de;
-    --text: #1f2328;
-    --muted: #59636e;
-    --accent: #0969da;
-    --star: #9a6700;
-    --chip-on: #1f2328;
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --border: #e2e5ea;
+    --border-strong: #c9ced6;
+    --text: #15181d;
+    --muted: #616874;
+    --accent: #3b55e6;
+    --star: #b98100;
+    --chip-on: #15181d;
     --chip-on-text: #ffffff;
+    --shadow: 0 1px 2px rgba(20, 24, 32, .04), 0 4px 14px rgba(20, 24, 32, .05);
+    --shadow-hover: 0 2px 4px rgba(20, 24, 32, .06), 0 10px 28px rgba(20, 24, 32, .10);
+    --display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, sans-serif;
+    --body: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0d1117;
-      --surface: #151b23;
-      --border: #30363d;
-      --text: #e6edf3;
-      --muted: #9198a1;
-      --accent: #4493f8;
-      --star: #e3b341;
-      --chip-on: #e6edf3;
-      --chip-on-text: #0d1117;
+      --bg: #0c0e13;
+      --card: #14171e;
+      --border: #232834;
+      --border-strong: #353c4b;
+      --text: #e8ebf1;
+      --muted: #9aa2b1;
+      --accent: #8ea0ff;
+      --star: #f2c14e;
+      --chip-on: #e8ebf1;
+      --chip-on-text: #0c0e13;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+      --shadow-hover: 0 8px 26px rgba(0, 0, 0, .45);
       color-scheme: dark;
     }
   }
   * { box-sizing: border-box; }
-  html { scroll-padding-top: 140px; }
+  html { scroll-padding-top: 150px; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    font: 15px/1.55 var(--body);
+    -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
   button { font: inherit; color: inherit; }
 
-  header { padding: 32px 0 12px; }
-  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
-  .tagline { margin: 4px 0 0; color: var(--muted); }
+  /* En-tête */
+  header { padding: 56px 0 28px; position: relative; overflow: hidden; }
+  header::before {
+    content: ""; position: absolute; inset: -40% -10% auto auto; width: 520px; height: 520px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--star) 22%, transparent), transparent);
+    pointer-events: none;
+  }
+  h1 {
+    margin: 0;
+    font: 700 clamp(34px, 6vw, 56px)/1.02 var(--display);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    display: flex; align-items: center; gap: 14px;
+  }
+  h1 .star { color: var(--star); font-size: .8em; transform: translateY(-.04em); }
+  .stats { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .stat { font: 500 13px/1 var(--mono); padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--muted); }
+  .stat b { color: var(--text); font-weight: 500; }
 
+  /* Barre de filtres */
   .bar {
     position: sticky; top: 0; z-index: 10;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-block: 1px solid var(--border);
     padding: 12px 0;
   }
   .row { display: flex; gap: 8px; align-items: center; }
   .search { position: relative; flex: 1; min-width: 0; }
+  .search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
   .search input {
     width: 100%;
-    padding: 9px 40px 9px 12px;
+    padding: 10px 40px 10px 36px;
     font: inherit;
     color: var(--text);
-    background: var(--surface);
+    background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     outline: none;
+    transition: border-color .15s, box-shadow .15s;
   }
-  .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+  .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
   .search kbd {
     position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-    font: 12px ui-monospace, SFMono-Regular, Menlo, monospace;
-    color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px;
+    font: 12px var(--mono);
+    color: var(--muted); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; background: var(--bg);
   }
   .ghost {
     flex: none;
-    padding: 8px 12px;
+    display: inline-grid; place-items: center;
+    width: 42px; height: 42px; padding: 0;
+    color: var(--muted);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg);
-    font-size: 13px;
+    border-radius: 10px;
+    background: var(--card);
     cursor: pointer;
-    white-space: nowrap;
   }
-  .ghost:hover { border-color: var(--muted); }
+  .ghost:hover { border-color: var(--border-strong); }
 
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .chips { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .chips::-webkit-scrollbar { display: none; }
   .chip {
-    font-size: 13px; line-height: 1;
-    padding: 6px 10px;
+    flex: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; line-height: 1; font-weight: 500;
+    padding: 7px 11px;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: var(--bg);
+    background: var(--card);
     cursor: pointer;
     white-space: nowrap;
+    transition: background .15s, border-color .15s, color .15s;
   }
-  .chip span { color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
-  .chip:hover { border-color: var(--muted); }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--hue); }
+  .chip span { color: var(--muted); font: 12px var(--mono); }
+  .chip:hover { border-color: var(--border-strong); }
   .chip[aria-pressed="true"] { background: var(--chip-on); border-color: var(--chip-on); color: var(--chip-on-text); }
-  .chip[aria-pressed="true"] span { color: inherit; opacity: .7; }
+  .chip[aria-pressed="true"] span { color: inherit; opacity: .65; }
   .chip:disabled { opacity: .4; cursor: default; }
-  .chip:focus-visible, .ghost:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .chip:focus-visible, .ghost:focus-visible, summary:focus-visible, .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+  /* Catégories */
+  main { padding-top: 8px; padding-bottom: 48px; }
   details.theme { border-bottom: 1px solid var(--border); }
+  details.theme:last-child { border-bottom: 0; }
   details.theme > summary {
     list-style: none;
-    display: flex; align-items: center; gap: 10px;
-    padding: 18px 0 14px;
+    display: flex; align-items: center; gap: 12px;
+    padding: 26px 0 16px;
     cursor: pointer;
     user-select: none;
   }
   details.theme > summary::-webkit-details-marker { display: none; }
-  .chev { width: 16px; height: 16px; flex: none; color: var(--muted); transition: transform .15s; }
+  .mark { width: 10px; height: 10px; border-radius: 3px; background: var(--hue); flex: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--hue) 18%, transparent); }
+  summary h2 { margin: 0; font: 650 21px/1.2 var(--display); letter-spacing: -0.015em; }
+  summary .count { font: 500 12px/1 var(--mono); color: var(--muted); padding: 4px 7px; border-radius: 6px; background: color-mix(in srgb, var(--hue) 12%, var(--card)); border: 1px solid var(--border); }
+  .chev { width: 18px; height: 18px; flex: none; color: var(--muted); transition: transform .2s; margin-left: auto; }
   details.theme:not([open]) .chev { transform: rotate(-90deg); }
-  summary h2 { margin: 0; font-size: 17px; }
-  summary .count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
-  summary .preview { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
-  details.theme[open] .preview { display: none; }
   summary:hover h2 { color: var(--accent); }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; padding-bottom: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; padding-bottom: 30px; }
   .card {
-    display: flex; flex-direction: column; gap: 6px;
-    padding: 12px 14px;
+    position: relative;
+    display: flex; flex-direction: column; gap: 8px;
+    padding: 16px 16px 14px;
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 14px;
     color: inherit;
     text-decoration: none;
-    background: var(--bg);
-    transition: border-color .12s, background .12s;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    min-width: 0;
   }
-  .card:hover { border-color: var(--accent); background: var(--surface); }
-  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .name { font-weight: 600; color: var(--accent); overflow-wrap: anywhere; }
-  .name .owner { font-weight: 400; color: var(--muted); }
-  .note { margin: 0; color: var(--text); font-size: 14px; flex: 1; }
-  .meta { display: flex; gap: 14px; color: var(--muted); font-size: 12.5px; }
+  .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); border-color: color-mix(in srgb, var(--hue) 55%, var(--border)); }
+  .top { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .avatar { width: 28px; height: 28px; border-radius: 8px; flex: none; background: var(--bg); border: 1px solid var(--border); }
+  .name { font: 500 14px/1.3 var(--mono); overflow-wrap: anywhere; min-width: 0; }
+  .name .owner { color: var(--muted); font-weight: 400; display: block; font-size: 12px; }
+  .arrow { margin-left: auto; color: var(--muted); opacity: 0; transform: translate(-3px, 3px); transition: opacity .18s, transform .18s; flex: none; }
+  .card:hover .arrow { opacity: 1; transform: none; color: var(--accent); }
+  .note { margin: 0; color: var(--text); font-size: 14.5px; flex: 1; }
+  .meta { display: flex; gap: 14px; color: var(--muted); font: 12px var(--mono); padding-top: 2px; }
   .meta .stars { color: var(--star); }
-  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
 
-  .empty { color: var(--muted); padding: 40px 0; text-align: center; }
-  footer { color: var(--muted); font-size: 13px; padding: 32px 0; }
+  .empty { color: var(--muted); padding: 56px 0; text-align: center; }
   [hidden] { display: none !important; }
-  @media (max-width: 520px) { .ghost .long { display: none; } }
-  @media (prefers-reduced-motion: reduce) { .chev, .card { transition: none; } }
+  @media (max-width: 560px) { header { padding-top: 36px; } }
+  @media (prefers-reduced-motion: reduce) { .chev, .card, .arrow, .chip { transition: none; } .card:hover { transform: none; } }
 </style>
 </head>
 <body>
   <header class="wrap">
-    <h1 id="title">Stars</h1>
-    <p class="tagline" id="tagline"></p>
+    <h1><span class="star" aria-hidden="true">★</span><span id="title">Stars</span></h1>
+    <div class="stats" id="stats"></div>
   </header>
 
   <div class="bar">
     <div class="wrap">
       <div class="row">
         <label class="search">
-          <input id="q" type="search" placeholder="Rechercher un repo, un sujet, un langage…" autocomplete="off" aria-label="Rechercher">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/></svg>
+          <input id="q" type="search" placeholder="Rechercher" autocomplete="off" aria-label="Rechercher">
           <kbd>/</kbd>
         </label>
-        <button class="ghost" id="fold" type="button">Tout replier</button>
+        <button class="ghost" id="fold" type="button" aria-label="Tout replier" title="Tout replier"></button>
       </div>
       <nav class="chips" id="chips" aria-label="Filtrer par thème"></nav>
     </div>
@@ -166,8 +213,6 @@
   <main class="wrap" id="list"></main>
   <p class="wrap empty" id="empty" hidden>Aucun repo ne correspond.</p>
 
-  <footer class="wrap" id="footer"></footer>
-
 <script>
 const LANG = {
   Python: "#3572A5", TypeScript: "#3178c6", JavaScript: "#f1e05a", Java: "#b07219",
@@ -175,6 +220,9 @@ const LANG = {
   "Jupyter Notebook": "#DA5B0B", CSS: "#563d7c", SCSS: "#c6538c", HTML: "#e34c26",
   PHP: "#4F5D95", Shell: "#89e051", Swift: "#F05138", Kotlin: "#A97BFF"
 };
+// Une teinte par catégorie, réparties sur le cercle chromatique.
+const HUES = [228, 265, 330, 20, 42, 150, 0, 190, 95, 300, 175, 55];
+const hue = i => `hsl(${HUES[i % HUES.length]} 70% 55%)`;
 const fmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -193,18 +241,20 @@ async function load() {
     fetch("data/stars.json").then(r => r.json()).catch(() => [])
   ]);
   const byRepo = new Map(stars.map(s => [s.repo.toLowerCase(), s]));
-  const themes = cfg.themes.map(t => ({
+  const themes = cfg.themes.map((t, i) => ({
     name: t.name,
     id: slug(t.name),
+    hue: hue(i),
     repos: t.repos.map(r => ({ ...byRepo.get(r.repo.toLowerCase()), ...r }))
   }));
   for (const id of [...picked]) if (!themes.some(t => t.id === id)) picked.delete(id);
 
   document.title = cfg.title;
   document.getElementById("title").textContent = cfg.title;
-  document.getElementById("tagline").textContent = cfg.tagline;
   render(themes);
 }
+
+const ARROW = `<svg class="arrow" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4.53 12.53a.75.75 0 0 1-1.06-1.06L9.94 5H5.75a.75.75 0 0 1 0-1.5h6a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V6.06Z"/></svg>`;
 
 function card(r) {
   const [owner, name] = r.repo.split("/");
@@ -214,12 +264,18 @@ function card(r) {
   const st = r.stars != null ? `<span class="stars">★ ${fmt(r.stars)}</span>` : "";
   const hay = [r.repo, r.note, r.description, r.language].join(" ").toLowerCase();
   return `<a class="card" href="https://github.com/${esc(r.repo)}" target="_blank" rel="noopener" data-hay="${esc(hay)}">
-    <div class="name"><span class="owner">${esc(owner)} / </span>${esc(name)}</div>
+    <div class="top">
+      <img class="avatar" src="https://github.com/${esc(owner)}.png?size=56" alt="" width="28" height="28" loading="lazy">
+      <div class="name"><span class="owner">${esc(owner)}</span>${esc(name)}</div>
+      ${ARROW}
+    </div>
     ${text ? `<p class="note">${esc(text)}</p>` : ""}
     <div class="meta">${st}${lang}</div>
   </a>`;
 }
 
+const FOLD_IN = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M10.896 2H8.75V.75a.75.75 0 0 0-1.5 0V2H5.104a.25.25 0 0 0-.177.427l2.896 2.896a.25.25 0 0 0 .354 0l2.896-2.896A.25.25 0 0 0 10.896 2ZM8.75 15.25a.75.75 0 0 1-1.5 0V14H5.104a.25.25 0 0 1-.177-.427l2.896-2.896a.25.25 0 0 1 .354 0l2.896 2.896a.25.25 0 0 1-.177.427H8.75v1.25Zm-6.5-6.5a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5ZM6 8a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 1 6 8Zm2.25.75a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5ZM12 8a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 1 12 8Zm2.25.75a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5Z"/></svg>`;
+const FOLD_OUT = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="m8.177.677 2.896 2.896a.25.25 0 0 1-.177.427H8.75v1.25a.75.75 0 0 1-1.5 0V4H5.104a.25.25 0 0 1-.177-.427L7.823.677a.25.25 0 0 1 .354 0ZM7.25 10.75a.75.75 0 0 1 1.5 0V12h2.146a.25.25 0 0 1 .177.427l-2.896 2.896a.25.25 0 0 1-.354 0l-2.896-2.896A.25.25 0 0 1 5.104 12H7.25v-1.25Zm-5-2a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5ZM6 8a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 1 6 8Zm2.25.75a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5ZM12 8a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 1 12 8Zm2.25.75a.75.75 0 0 0 0-1.5h-.5a.75.75 0 0 0 0 1.5h.5Z"/></svg>`;
 const CHEV = `<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.75.75 0 0 1 1.06-1.06L8 8.94l3.72-3.72a.75.75 0 0 1 1.06 0Z"/></svg>`;
 
 function render(themes) {
@@ -229,17 +285,16 @@ function render(themes) {
   const fold = document.getElementById("fold");
 
   list.innerHTML = themes.map(t => `
-    <details class="theme" id="${t.id}" data-theme="${esc(t.name.toLowerCase())}"${closed.has(t.id) ? "" : " open"}>
-      <summary>${CHEV}<h2>${esc(t.name)}</h2><span class="count">${t.repos.length}</span>
-        <span class="preview">${esc(t.repos.map(r => r.repo.split("/")[1]).join(" · "))}</span></summary>
+    <details class="theme" id="${t.id}" style="--hue:${t.hue}" data-theme="${esc(t.name.toLowerCase())}"${closed.has(t.id) ? "" : " open"}>
+      <summary><span class="mark"></span><h2>${esc(t.name)}</h2><span class="count">${t.repos.length}</span>${CHEV}</summary>
       <div class="grid">${t.repos.map(card).join("")}</div>
     </details>`).join("");
 
-  chips.innerHTML = `<button class="chip" type="button" data-id="">Tous<span>${themes.reduce((n, t) => n + t.repos.length, 0)}</span></button>` +
-    themes.map(t => `<button class="chip" type="button" data-id="${t.id}">${esc(t.name)}<span>${t.repos.length}</span></button>`).join("");
-
   const total = themes.reduce((n, t) => n + t.repos.length, 0);
-  document.getElementById("footer").textContent = `${total} repos · ${themes.length} thèmes`;
+  chips.innerHTML = `<button class="chip" type="button" data-id="">Tous<span>${total}</span></button>` +
+    themes.map(t => `<button class="chip" type="button" data-id="${t.id}" style="--hue:${t.hue}"><i></i>${esc(t.name)}<span>${t.repos.length}</span></button>`).join("");
+
+  document.getElementById("stats").innerHTML = `<span class="stat"><b>${total}</b> repos</span>`;
 
   const sections = [...list.querySelectorAll("details.theme")];
 
@@ -263,9 +318,10 @@ function render(themes) {
     });
     chips.querySelectorAll(".chip").forEach(c =>
       c.setAttribute("aria-pressed", String(c.dataset.id ? picked.has(c.dataset.id) : picked.size === 0)));
-    const visible = sections.filter(s => !s.hidden);
-    fold.innerHTML = visible.some(s => s.open)
-      ? `Tout replier` : `Tout déplier`;
+    const anyOpen = sections.filter(s => !s.hidden).some(s => s.open);
+    fold.innerHTML = anyOpen ? FOLD_IN : FOLD_OUT;
+    fold.title = anyOpen ? "Tout replier" : "Tout déplier";
+    fold.setAttribute("aria-label", fold.title);
     document.getElementById("empty").hidden = any;
   };
 
@@ -281,7 +337,7 @@ function render(themes) {
     else if (picked.has(id)) picked.delete(id);
     else picked.add(id);
     // une catégorie qu'on sélectionne doit être visible : on la déplie
-    if (id && picked.has(id)) { const s = document.getElementById(id); s.open = true; }
+    if (id && picked.has(id)) document.getElementById(id).open = true;
     syncHash(); update();
   });
 
