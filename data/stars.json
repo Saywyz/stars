@@ -28,6 +28,13 @@
     "archived": false
   },
   {
+    "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
+    "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
+    "language": "TypeScript",
+    "stars": 783,
+    "archived": false
+  },
+  {
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
@@ -105,10 +112,10 @@
     "archived": false
   },
   {
-    "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
-    "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
-    "language": "TypeScript",
-    "stars": 783,
+    "repo": "Saywyz/better-zimbra",
+    "description": "MCP (Model Context Protocol) server for Zimbra to manage emails, tags, and calendar.",
+    "language": "Python",
+    "stars": 1,
     "archived": false
   }
 ]
