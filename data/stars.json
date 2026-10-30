@@ -117,5 +117,12 @@
     "language": "Python",
     "stars": 1,
     "archived": false
+  },
+  {
+    "repo": "miqdadbadjuber/anti-slop",
+    "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
+    "language": "JavaScript",
+    "stars": 7620,
+    "archived": false
   }
 ]
