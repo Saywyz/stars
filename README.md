@@ -5,19 +5,17 @@ Une sélection de repos GitHub, rangés par thème : **https://saywyz.github.io/
 ## Comment ça marche
 
 - `data/themes.json` : la sélection. Seuls les repos listés ici apparaissent sur la page.
-- `data/stars.json` : étoiles, langage et description des repos sélectionnés.
+- `data/stars.json` : étoiles, langage et description des repos affichés.
+- `data/starred.json` : la liste complète de mes stars, utilisée par l'artefact d'admin. Le site ne la lit pas.
+- `data/refresh.json` : écrit par l'artefact quand je clique « Actualiser », ce qui lance l'action [Sync stars](.github/workflows/sync-stars.yml).
 
-Les deux fichiers sont écrits par mon artefact d'admin dans Claude : il liste toutes mes stars, je choisis lesquelles afficher et dans quel thème, puis « Publier sur le site » fait un commit ici.
+L'action tourne aussi chaque nuit. Elle met à jour `starred.json` et les compteurs de `stars.json`.
 
-On peut aussi éditer `data/themes.json` à la main :
-
-```json
-{ "repo": "owner/nom", "note": "Ce que fait le repo, en une phrase." }
-```
+Dans l'artefact d'admin, je choisis quelles stars afficher et dans quel thème, puis « Publier sur le site » écrit `themes.json` et `stars.json` en un commit.
 
 ## En local
 
 ```bash
-node scripts/sync-stars.mjs --new   # liste les stars qui ne sont pas encore sur le site
-python -m http.server 8000          # puis http://localhost:8000
+node scripts/sync-stars.mjs     # met à jour starred.json et stars.json
+python -m http.server 8000      # puis http://localhost:8000
 ```
