@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-30T10:51:33.965Z",
-  "request": "1793357486418-arq7bd",
+  "updatedAt": "2026-10-30T10:52:16.319Z",
+  "request": "1793357527784-fiq9hv",
   "stars": [
     {
       "repo": "gamedev-skills/awesome-gamedev-agent-skills",
@@ -76,7 +76,7 @@
       "repo": "morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 410003,
+      "stars": 410007,
       "archived": false
     },
     {
