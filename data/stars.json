@@ -3,14 +3,14 @@
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 258681,
+    "stars": 258683,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 139065,
+    "stars": 139069,
     "archived": false
   },
   {
@@ -80,7 +80,7 @@
     "repo": "heygen-com/hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
-    "stars": 75738,
+    "stars": 75740,
     "archived": false
   },
   {
@@ -115,7 +115,7 @@
     "repo": "Nicovic17/vanish_webcam",
     "description": null,
     "language": "Python",
-    "stars": 743,
+    "stars": 744,
     "archived": false
   },
   {
@@ -199,7 +199,7 @@
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 410007,
+    "stars": 410029,
     "archived": false
   },
   {
