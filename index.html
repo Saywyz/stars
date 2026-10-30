@@ -29,10 +29,11 @@
       --star: #e3b341;
       --chip-on: #e6edf3;
       --chip-on-text: #0d1117;
+      color-scheme: dark;
     }
   }
   * { box-sizing: border-box; }
-  html { scroll-padding-top: 120px; }
+  html { scroll-padding-top: 140px; }
   body {
     margin: 0;
     background: var(--bg);
@@ -40,6 +41,7 @@
     font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  button { font: inherit; color: inherit; }
 
   header { padding: 32px 0 12px; }
   h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
@@ -51,7 +53,8 @@
     border-bottom: 1px solid var(--border);
     padding: 12px 0;
   }
-  .search { position: relative; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .search { position: relative; flex: 1; min-width: 0; }
   .search input {
     width: 100%;
     padding: 9px 40px 9px 12px;
@@ -68,27 +71,53 @@
     font: 12px ui-monospace, SFMono-Regular, Menlo, monospace;
     color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px;
   }
-  .chips { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
-  .chips::-webkit-scrollbar { display: none; }
-  .chip {
+  .ghost {
     flex: none;
-    font: 13px/1 inherit; font-family: inherit;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .ghost:hover { border-color: var(--muted); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .chip {
+    font-size: 13px; line-height: 1;
     padding: 6px 10px;
     border: 1px solid var(--border);
     border-radius: 999px;
-    color: var(--text);
     background: var(--bg);
-    text-decoration: none;
+    cursor: pointer;
     white-space: nowrap;
   }
-  .chip span { color: var(--muted); margin-left: 4px; }
+  .chip span { color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
   .chip:hover { border-color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--chip-on); border-color: var(--chip-on); color: var(--chip-on-text); }
+  .chip[aria-pressed="true"] span { color: inherit; opacity: .7; }
+  .chip:disabled { opacity: .4; cursor: default; }
+  .chip:focus-visible, .ghost:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  section { padding-top: 28px; }
-  h2 { font-size: 17px; margin: 0 0 12px; display: flex; align-items: baseline; gap: 8px; }
-  h2 small { color: var(--muted); font-weight: 400; font-size: 13px; }
+  details.theme { border-bottom: 1px solid var(--border); }
+  details.theme > summary {
+    list-style: none;
+    display: flex; align-items: center; gap: 10px;
+    padding: 18px 0 14px;
+    cursor: pointer;
+    user-select: none;
+  }
+  details.theme > summary::-webkit-details-marker { display: none; }
+  .chev { width: 16px; height: 16px; flex: none; color: var(--muted); transition: transform .15s; }
+  details.theme:not([open]) .chev { transform: rotate(-90deg); }
+  summary h2 { margin: 0; font-size: 17px; }
+  summary .count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  summary .preview { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
+  details.theme[open] .preview { display: none; }
+  summary:hover h2 { color: var(--accent); }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; padding-bottom: 22px; }
   .card {
     display: flex; flex-direction: column; gap: 6px;
     padding: 12px 14px;
@@ -109,9 +138,10 @@
   .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
 
   .empty { color: var(--muted); padding: 40px 0; text-align: center; }
-  footer { color: var(--muted); font-size: 13px; padding: 40px 0 32px; }
-  footer a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 13px; padding: 32px 0; }
   [hidden] { display: none !important; }
+  @media (max-width: 520px) { .ghost .long { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .chev, .card { transition: none; } }
 </style>
 </head>
 <body>
@@ -122,11 +152,14 @@
 
   <div class="bar">
     <div class="wrap">
-      <label class="search">
-        <input id="q" type="search" placeholder="Rechercher un repo, un sujet, un langage…" autocomplete="off" aria-label="Rechercher">
-        <kbd>/</kbd>
-      </label>
-      <nav class="chips" id="chips" aria-label="Thèmes"></nav>
+      <div class="row">
+        <label class="search">
+          <input id="q" type="search" placeholder="Rechercher un repo, un sujet, un langage…" autocomplete="off" aria-label="Rechercher">
+          <kbd>/</kbd>
+        </label>
+        <button class="ghost" id="fold" type="button">Tout replier</button>
+      </div>
+      <nav class="chips" id="chips" aria-label="Filtrer par thème"></nav>
     </div>
   </div>
 
@@ -145,6 +178,14 @@ const LANG = {
 const fmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+
+// Filtre par thèmes : sélection multiple, partageable via l'URL (#theme-a,theme-b).
+const picked = new Set(decodeURIComponent(location.hash.slice(1)).split(",").filter(Boolean));
+const closed = new Set(store.get("closed", []));
 
 async function load() {
   const [cfg, stars] = await Promise.all([
@@ -154,8 +195,10 @@ async function load() {
   const byRepo = new Map(stars.map(s => [s.repo.toLowerCase(), s]));
   const themes = cfg.themes.map(t => ({
     name: t.name,
+    id: slug(t.name),
     repos: t.repos.map(r => ({ ...byRepo.get(r.repo.toLowerCase()), ...r }))
   }));
+  for (const id of [...picked]) if (!themes.some(t => t.id === id)) picked.delete(id);
 
   document.title = cfg.title;
   document.getElementById("title").textContent = cfg.title;
@@ -177,50 +220,94 @@ function card(r) {
   </a>`;
 }
 
+const CHEV = `<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.75.75 0 0 1 1.06-1.06L8 8.94l3.72-3.72a.75.75 0 0 1 1.06 0Z"/></svg>`;
+
 function render(themes) {
   const list = document.getElementById("list");
   const chips = document.getElementById("chips");
+  const q = document.getElementById("q");
+  const fold = document.getElementById("fold");
+
   list.innerHTML = themes.map(t => `
-    <section id="${slug(t.name)}" data-theme="${esc(t.name.toLowerCase())}">
-      <h2>${esc(t.name)} <small>${t.repos.length}</small></h2>
+    <details class="theme" id="${t.id}" data-theme="${esc(t.name.toLowerCase())}"${closed.has(t.id) ? "" : " open"}>
+      <summary>${CHEV}<h2>${esc(t.name)}</h2><span class="count">${t.repos.length}</span>
+        <span class="preview">${esc(t.repos.map(r => r.repo.split("/")[1]).join(" · "))}</span></summary>
       <div class="grid">${t.repos.map(card).join("")}</div>
-    </section>`).join("");
-  chips.innerHTML = themes.map(t =>
-    `<a class="chip" href="#${slug(t.name)}" data-for="${slug(t.name)}">${esc(t.name)}<span>${t.repos.length}</span></a>`).join("");
+    </details>`).join("");
+
+  chips.innerHTML = `<button class="chip" type="button" data-id="">Tous<span>${themes.reduce((n, t) => n + t.repos.length, 0)}</span></button>` +
+    themes.map(t => `<button class="chip" type="button" data-id="${t.id}">${esc(t.name)}<span>${t.repos.length}</span></button>`).join("");
 
   const total = themes.reduce((n, t) => n + t.repos.length, 0);
-  document.getElementById("footer").innerHTML =
-    `${total} repos · ${themes.length} thèmes`;
+  document.getElementById("footer").textContent = `${total} repos · ${themes.length} thèmes`;
 
-  const q = document.getElementById("q");
-  const filter = () => {
+  const sections = [...list.querySelectorAll("details.theme")];
+
+  const update = () => {
     const terms = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     let any = false;
-    list.querySelectorAll("section").forEach(sec => {
+    sections.forEach(sec => {
       let n = 0;
       sec.querySelectorAll(".card").forEach(c => {
-        const hay = c.dataset.hay + " " + sec.dataset.theme;
-        const ok = terms.every(t => hay.includes(t));
+        const ok = terms.every(t => (c.dataset.hay + " " + sec.dataset.theme).includes(t));
         c.hidden = !ok;
         if (ok) n++;
       });
-      sec.hidden = n === 0;
-      sec.querySelector("small").textContent = n;
-      const chip = chips.querySelector(`[data-for="${sec.id}"]`);
-      chip.hidden = n === 0;
+      sec.querySelector(".count").textContent = n;
+      const chip = chips.querySelector(`[data-id="${sec.id}"]`);
       chip.querySelector("span").textContent = n;
-      any ||= n > 0;
+      chip.disabled = n === 0 && !picked.has(sec.id);
+      sec.hidden = n === 0 || (picked.size > 0 && !picked.has(sec.id));
+      if (terms.length && n) sec.open = true;   // une recherche ouvre les catégories où elle trouve quelque chose
+      any ||= !sec.hidden;
     });
+    chips.querySelectorAll(".chip").forEach(c =>
+      c.setAttribute("aria-pressed", String(c.dataset.id ? picked.has(c.dataset.id) : picked.size === 0)));
+    const visible = sections.filter(s => !s.hidden);
+    fold.innerHTML = visible.some(s => s.open)
+      ? `Tout replier` : `Tout déplier`;
     document.getElementById("empty").hidden = any;
   };
-  q.addEventListener("input", filter);
+
+  const syncHash = () => {
+    const h = [...picked].join(",");
+    history.replaceState(null, "", h ? `#${h}` : location.pathname + location.search);
+  };
+
+  chips.addEventListener("click", e => {
+    const c = e.target.closest(".chip"); if (!c) return;
+    const id = c.dataset.id;
+    if (!id) picked.clear();
+    else if (picked.has(id)) picked.delete(id);
+    else picked.add(id);
+    // une catégorie qu'on sélectionne doit être visible : on la déplie
+    if (id && picked.has(id)) { const s = document.getElementById(id); s.open = true; }
+    syncHash(); update();
+  });
+
+  list.addEventListener("toggle", e => {
+    const s = e.target; if (!s.matches?.("details.theme")) return;
+    s.open ? closed.delete(s.id) : closed.add(s.id);
+    store.set("closed", [...closed]);
+    update();
+  }, true);
+
+  fold.addEventListener("click", () => {
+    const visible = sections.filter(s => !s.hidden);
+    const open = !visible.some(s => s.open);
+    visible.forEach(s => { s.open = open; });
+  });
+
+  q.addEventListener("input", update);
   q.addEventListener("keydown", e => {
-    if (e.key === "Escape") { q.value = ""; filter(); q.blur(); }
-    if (e.key === "Enter") { const first = list.querySelector(".card:not([hidden])"); if (first) window.open(first.href, "_blank"); }
+    if (e.key === "Escape") { q.value = ""; update(); q.blur(); }
+    if (e.key === "Enter") { const first = list.querySelector("details.theme:not([hidden]) .card:not([hidden])"); if (first) window.open(first.href, "_blank"); }
   });
   document.addEventListener("keydown", e => {
     if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); }
   });
+
+  update();
 }
 
 load();
