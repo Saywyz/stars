@@ -3,7 +3,7 @@
     "repo": "heygen-com/hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
-    "stars": 75890,
+    "stars": 75903,
     "archived": false
   },
   {
@@ -38,14 +38,14 @@
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 258788,
+    "stars": 258798,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 139263,
+    "stars": 139273,
     "archived": false
   },
   {
@@ -59,7 +59,7 @@
     "repo": "gamedev-skills/awesome-gamedev-agent-skills",
     "description": "77 game-dev skills for AI coding agents — Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox. Portable SKILL.md Agent Skills (the format Anthropic launched as Claude Skills), with a router that loads the right skill for your engine and task. Runs in Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI and more.",
     "language": "Python",
-    "stars": 5892,
+    "stars": 5902,
     "archived": false
   },
   {
@@ -80,7 +80,7 @@
     "repo": "Leonxlnx/earshot",
     "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
     "language": "Python",
-    "stars": 3296,
+    "stars": 3297,
     "archived": false
   },
   {
@@ -94,7 +94,7 @@
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 411187,
+    "stars": 411249,
     "archived": false
   },
   {
