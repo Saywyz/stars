@@ -3,63 +3,63 @@
     "repo": "heygen-com/hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
-    "stars": 75903,
+    "stars": 76232,
     "archived": false
   },
   {
     "repo": "feitangyuan/onetake",
     "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
     "language": "Python",
-    "stars": 3528,
+    "stars": 3554,
     "archived": false
   },
   {
     "repo": "SYSTRAN/faster-whisper",
     "description": "Faster Whisper transcription with CTranslate2",
     "language": "Python",
-    "stars": 26327,
+    "stars": 26344,
     "archived": false
   },
   {
     "repo": "freemocap/freemocap",
     "description": "Free Motion Capture for Everyone 💀✨",
     "language": "TypeScript",
-    "stars": 10611,
+    "stars": 10616,
     "archived": false
   },
   {
     "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
     "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
     "language": "TypeScript",
-    "stars": 783,
+    "stars": 791,
     "archived": false
   },
   {
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 258798,
+    "stars": 258996,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 139273,
+    "stars": 139704,
     "archived": false
   },
   {
     "repo": "alirezarezvani/claude-skills",
     "description": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
     "language": "Python",
-    "stars": 29022,
+    "stars": 29045,
     "archived": false
   },
   {
     "repo": "gamedev-skills/awesome-gamedev-agent-skills",
     "description": "77 game-dev skills for AI coding agents — Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox. Portable SKILL.md Agent Skills (the format Anthropic launched as Claude Skills), with a router that loads the right skill for your engine and task. Runs in Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI and more.",
     "language": "Python",
-    "stars": 5902,
+    "stars": 6199,
     "archived": false
   },
   {
@@ -73,14 +73,14 @@
     "repo": "stickerdaniel/linkedin-mcp-server",
     "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
     "language": "Python",
-    "stars": 4051,
+    "stars": 4060,
     "archived": false
   },
   {
     "repo": "Leonxlnx/earshot",
     "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
     "language": "Python",
-    "stars": 3297,
+    "stars": 3344,
     "archived": false
   },
   {
@@ -94,14 +94,14 @@
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 411249,
+    "stars": 413588,
     "archived": false
   },
   {
     "repo": "skylot/jadx",
     "description": "Dex to Java decompiler",
     "language": "Java",
-    "stars": 51385,
+    "stars": 51401,
     "archived": false
   },
   {
@@ -122,7 +122,7 @@
     "repo": "miqdadbadjuber/anti-slop",
     "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
     "language": "JavaScript",
-    "stars": 7620,
+    "stars": 7667,
     "archived": false
   }
 ]
