@@ -3,63 +3,63 @@
     "repo": "heygen-com/hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
-    "stars": 80279,
+    "stars": 80773,
     "archived": false
   },
   {
     "repo": "feitangyuan/onetake",
     "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
     "language": "Python",
-    "stars": 3876,
+    "stars": 3935,
     "archived": false
   },
   {
     "repo": "SYSTRAN/faster-whisper",
     "description": "Faster Whisper transcription with CTranslate2",
     "language": "Python",
-    "stars": 26552,
+    "stars": 26581,
     "archived": false
   },
   {
     "repo": "freemocap/freemocap",
     "description": "Free Motion Capture for Everyone 💀✨",
     "language": "TypeScript",
-    "stars": 10725,
+    "stars": 10739,
     "archived": false
   },
   {
     "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
     "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
     "language": "TypeScript",
-    "stars": 829,
+    "stars": 833,
     "archived": false
   },
   {
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 261331,
+    "stars": 261598,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 143727,
+    "stars": 144188,
     "archived": false
   },
   {
     "repo": "alirezarezvani/claude-skills",
     "description": "410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
     "language": "Python",
-    "stars": 29440,
+    "stars": 29467,
     "archived": false
   },
   {
     "repo": "gamedev-skills/awesome-gamedev-agent-skills",
     "description": "77 game-dev skills for AI coding agents — Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox. Portable SKILL.md Agent Skills (the format Anthropic launched as Claude Skills), with a router that loads the right skill for your engine and task. Runs in Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI and more.",
     "language": "Python",
-    "stars": 7416,
+    "stars": 7716,
     "archived": false
   },
   {
@@ -73,21 +73,21 @@
     "repo": "stickerdaniel/linkedin-mcp-server",
     "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
     "language": "Python",
-    "stars": 4134,
+    "stars": 4144,
     "archived": false
   },
   {
     "repo": "Leonxlnx/earshot",
     "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
     "language": "Python",
-    "stars": 4108,
+    "stars": 4219,
     "archived": false
   },
   {
     "repo": "jeremie-lesage/zimbra-mcp",
     "description": "MCP (Model Context Protocol) server for Zimbra to manage emails, tags, and calendar.",
     "language": "Python",
-    "stars": 5,
+    "stars": 6,
     "archived": false
   },
   {
@@ -101,21 +101,21 @@
     "repo": "miqdadbadjuber/anti-slop",
     "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
     "language": "JavaScript",
-    "stars": 8539,
+    "stars": 8625,
     "archived": false
   },
   {
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 439263,
+    "stars": 442149,
     "archived": false
   },
   {
     "repo": "skylot/jadx",
     "description": "Dex to Java decompiler",
     "language": "Java",
-    "stars": 51655,
+    "stars": 51684,
     "archived": false
   },
   {
@@ -129,7 +129,7 @@
     "repo": "patch-gg/pixelfx",
     "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
     "language": "JavaScript",
-    "stars": 5712,
+    "stars": 5966,
     "archived": false
   }
 ]
