@@ -1,65 +1,65 @@
 [
   {
     "repo": "heygen-com/hyperframes",
-    "description": "Write HTML. Render video. Built for agents.",
+    "description": "AI video you can actually edit. HyperFrames is a free, open-source AI video editor. Describe any video and get a real project you can change down to the frame.",
     "language": "TypeScript",
-    "stars": 85618,
+    "stars": 86265,
     "archived": false
   },
   {
     "repo": "feitangyuan/onetake",
     "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
     "language": "Python",
-    "stars": 4202,
+    "stars": 4230,
     "archived": false
   },
   {
     "repo": "SYSTRAN/faster-whisper",
     "description": "Faster Whisper transcription with CTranslate2",
     "language": "Python",
-    "stars": 26819,
+    "stars": 26846,
     "archived": false
   },
   {
     "repo": "freemocap/freemocap",
     "description": "Free Motion Capture for Everyone 💀✨",
     "language": "TypeScript",
-    "stars": 10828,
+    "stars": 10836,
     "archived": false
   },
   {
     "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
     "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
     "language": "TypeScript",
-    "stars": 889,
+    "stars": 896,
     "archived": false
   },
   {
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 264075,
+    "stars": 264384,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 149318,
+    "stars": 149921,
     "archived": false
   },
   {
     "repo": "alirezarezvani/claude-skills",
     "description": "410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
     "language": "Python",
-    "stars": 29950,
+    "stars": 30044,
     "archived": false
   },
   {
     "repo": "gamedev-skills/awesome-gamedev-agent-skills",
     "description": "Make games with your AI coding agent: 79 game-dev skills and a router for Godot, Unity, Unreal, Roblox, three.js, Phaser and 6 more engines. Checked on the real engines.",
     "language": "Python",
-    "stars": 9239,
+    "stars": 9380,
     "archived": false
   },
   {
@@ -73,14 +73,14 @@
     "repo": "stickerdaniel/linkedin-mcp-server",
     "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
     "language": "Python",
-    "stars": 4235,
+    "stars": 4244,
     "archived": false
   },
   {
     "repo": "Leonxlnx/earshot",
     "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
     "language": "Python",
-    "stars": 5059,
+    "stars": 5133,
     "archived": false
   },
   {
@@ -101,21 +101,21 @@
     "repo": "miqdadbadjuber/anti-slop",
     "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
     "language": "JavaScript",
-    "stars": 9409,
+    "stars": 9470,
     "archived": false
   },
   {
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 465308,
+    "stars": 467397,
     "archived": false
   },
   {
     "repo": "skylot/jadx",
     "description": "Dex to Java decompiler",
     "language": "Java",
-    "stars": 51868,
+    "stars": 51889,
     "archived": false
   },
   {
@@ -129,7 +129,7 @@
     "repo": "patch-gg/pixelfx",
     "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
     "language": "JavaScript",
-    "stars": 7910,
+    "stars": 8080,
     "archived": false
   }
 ]
