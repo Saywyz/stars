@@ -53,6 +53,14 @@
         {
           "repo": "takaakit/superpowers-uml",
           "note": "Variante de Superpowers où l'agent conçoit en UML avant de coder."
+        },
+        {
+          "repo": "erkamyaman/rust-anything",
+          "note": ""
+        },
+        {
+          "repo": "heydamir/unslop",
+          "note": ""
         }
       ]
     },
@@ -77,6 +85,14 @@
         },
         {
           "repo": "miqdadbadjuber/anti-slop",
+          "note": ""
+        },
+        {
+          "repo": "nickclyde/duckduckgo-mcp-server",
+          "note": ""
+        },
+        {
+          "repo": "phone-harness/mcp",
           "note": ""
         }
       ]
