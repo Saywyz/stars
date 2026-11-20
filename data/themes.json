@@ -116,6 +116,14 @@
         {
           "repo": "Noobzik/Resume-Matcher",
           "note": "Analyse un CV face à une offre et suggère des mots-clés."
+        },
+        {
+          "repo": "zubair-trabzada/geo-seo-claude",
+          "note": ""
+        },
+        {
+          "repo": "AgriciDaniel/claude-seo",
+          "note": ""
         }
       ]
     }
