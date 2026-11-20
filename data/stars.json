@@ -3,7 +3,7 @@
     "repo": "heygen-com/hyperframes",
     "description": "AI video you can actually edit. HyperFrames is a free, open-source AI video editor. Describe any video and get a real project you can change down to the frame.",
     "language": "TypeScript",
-    "stars": 87303,
+    "stars": 87304,
     "archived": false
   },
   {
@@ -52,7 +52,7 @@
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 150967,
+    "stars": 150969,
     "archived": false
   },
   {
@@ -80,14 +80,14 @@
     "repo": "erkamyaman/rust-anything",
     "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
     "language": "Rust",
-    "stars": 6159,
+    "stars": 6160,
     "archived": false
   },
   {
     "repo": "heydamir/unslop",
     "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
     "language": "JavaScript",
-    "stars": 19038,
+    "stars": 19039,
     "archived": false
   },
   {
@@ -143,7 +143,7 @@
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 470995,
+    "stars": 470996,
     "archived": false
   },
   {
