@@ -57,10 +57,6 @@
         {
           "repo": "erkamyaman/rust-anything",
           "note": ""
-        },
-        {
-          "repo": "heydamir/unslop",
-          "note": ""
         }
       ]
     },
@@ -81,10 +77,6 @@
         },
         {
           "repo": "Saywyz/better-zimbra",
-          "note": ""
-        },
-        {
-          "repo": "miqdadbadjuber/anti-slop",
           "note": ""
         },
         {
@@ -113,6 +105,14 @@
     {
       "name": "Web & front",
       "repos": [
+        {
+          "repo": "heydamir/unslop",
+          "note": ""
+        },
+        {
+          "repo": "miqdadbadjuber/anti-slop",
+          "note": ""
+        },
         {
           "repo": "Noobzik/Resume-Matcher",
           "note": "Analyse un CV face à une offre et suggère des mots-clés."

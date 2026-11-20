@@ -77,6 +77,20 @@
     "archived": false
   },
   {
+    "repo": "erkamyaman/rust-anything",
+    "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+    "language": "Rust",
+    "stars": 4266,
+    "archived": false
+  },
+  {
+    "repo": "heydamir/unslop",
+    "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+    "language": "JavaScript",
+    "stars": 18482,
+    "archived": false
+  },
+  {
     "repo": "stickerdaniel/linkedin-mcp-server",
     "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
     "language": "Python",
@@ -112,6 +126,20 @@
     "archived": false
   },
   {
+    "repo": "nickclyde/duckduckgo-mcp-server",
+    "description": "A Model Context Protocol (MCP) server that provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
+    "language": "Python",
+    "stars": 1585,
+    "archived": false
+  },
+  {
+    "repo": "phone-harness/mcp",
+    "description": "Connect AI agents to real iPhones and Androids",
+    "language": "Python",
+    "stars": 823,
+    "archived": false
+  },
+  {
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
@@ -130,34 +158,6 @@
     "description": "Improve your resumes with Resume Matcher. Get insights, keyword suggestions and tune your resumes to job descriptions. ",
     "language": "TypeScript",
     "stars": 1,
-    "archived": false
-  },
-  {
-    "repo": "erkamyaman/rust-anything",
-    "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
-    "language": "Rust",
-    "stars": 4266,
-    "archived": false
-  },
-  {
-    "repo": "nickclyde/duckduckgo-mcp-server",
-    "description": "A Model Context Protocol (MCP) server that provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
-    "language": "Python",
-    "stars": 1585,
-    "archived": false
-  },
-  {
-    "repo": "heydamir/unslop",
-    "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
-    "language": "JavaScript",
-    "stars": 18482,
-    "archived": false
-  },
-  {
-    "repo": "phone-harness/mcp",
-    "description": "Connect AI agents to real iPhones and Androids",
-    "language": "Python",
-    "stars": 823,
     "archived": false
   }
 ]
