@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-11-20T14:44:42.004Z",
+  "updatedAt": "2026-11-21T11:53:22.222Z",
   "request": "1795185866197-t9ncbz",
   "stars": [
     {
       "repo": "AgriciDaniel/claude-seo",
       "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
       "language": "Python",
-      "stars": 31069,
+      "stars": 31279,
       "archived": false
     },
     {
       "repo": "zubair-trabzada/geo-seo-claude",
       "description": "GEO-first SEO skill for Claude Code. Comprehensive AI search optimization for any website — citability scoring, AI crawler analysis, brand authority, schema markup, platform-specific optimization, and PDF reports.  If you want learn how to sell this to real businesses, check out the skool community",
       "language": "Python",
-      "stars": 11789,
+      "stars": 11798,
       "archived": false
     },
     {
       "repo": "erkamyaman/rust-anything",
       "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
       "language": "Rust",
-      "stars": 6160,
+      "stars": 7014,
       "archived": false
     },
     {
       "repo": "localsend/localsend",
       "description": "An open-source cross-platform alternative to AirDrop",
       "language": "Dart",
-      "stars": 99927,
+      "stars": 100058,
       "archived": false
     },
     {
       "repo": "0x0funky/agent-sprite-forge",
       "description": "Agent Skill for generating 2D sprite sheets and map, transparent PNG frames, and animated GIFs from prompts.",
       "language": "Python",
-      "stars": 5884,
+      "stars": 5896,
       "archived": false
     },
     {
@@ -48,14 +48,14 @@
       "repo": "asad-albadi/PixelCraft",
       "description": "Pixel art, sprites and animation, in a standalone desktop editor.",
       "language": "Rust",
-      "stars": 12,
+      "stars": 14,
       "archived": false
     },
     {
       "repo": "rhinoc/xprite-pixelate",
       "description": "Recover the real pixel grid of AI-generated and upscaled pixel art, and turn images into pixel art.",
       "language": "TypeScript",
-      "stars": 88,
+      "stars": 89,
       "archived": false
     },
     {
@@ -76,14 +76,14 @@
       "repo": "dotslashsimran/simcraft",
       "description": "my claude skills for everyday work",
       "language": "Python",
-      "stars": 532,
+      "stars": 536,
       "archived": false
     },
     {
       "repo": "OpenSmash-Ultimate/OpenSmash-Ultimate",
       "description": "Super Smash Bros. Ultimate as a native PC program by static recompilation: WindowSmash and ssbu-recomp merged. Bring your own dump. Discord: discord.gg/pkgyYGf3YB",
       "language": "C",
-      "stars": 217,
+      "stars": 225,
       "archived": false
     },
     {
@@ -97,14 +97,14 @@
       "repo": "nickclyde/duckduckgo-mcp-server",
       "description": "A Model Context Protocol (MCP) server that provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
       "language": "Python",
-      "stars": 1582,
+      "stars": 1584,
       "archived": false
     },
     {
       "repo": "caldoai/skills",
       "description": "Caldo's skills",
       "language": null,
-      "stars": 1508,
+      "stars": 1520,
       "archived": false
     },
     {
@@ -118,28 +118,28 @@
       "repo": "heydamir/unslop",
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "language": "JavaScript",
-      "stars": 19039,
+      "stars": 19499,
       "archived": false
     },
     {
       "repo": "phone-harness/mcp",
       "description": "Connect AI agents to real iPhones and Androids",
       "language": "Python",
-      "stars": 830,
+      "stars": 831,
       "archived": false
     },
     {
       "repo": "patch-gg/pixelfx",
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "language": "JavaScript",
-      "stars": 8459,
+      "stars": 8571,
       "archived": false
     },
     {
       "repo": "miqdadbadjuber/anti-slop",
       "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
       "language": "JavaScript",
-      "stars": 9663,
+      "stars": 9735,
       "archived": false
     },
     {
@@ -153,14 +153,14 @@
       "repo": "gamedev-skills/awesome-gamedev-agent-skills",
       "description": "Make games with your AI coding agent: 79 game-dev skills and a router for Godot, Unity, Unreal, Roblox, three.js, Phaser and 6 more engines. Checked on the real engines.",
       "language": "Python",
-      "stars": 9648,
+      "stars": 9768,
       "archived": false
     },
     {
       "repo": "freemocap/freemocap",
       "description": "Free Motion Capture for Everyone 💀✨",
       "language": "TypeScript",
-      "stars": 10861,
+      "stars": 10866,
       "archived": false
     },
     {
@@ -174,35 +174,35 @@
       "repo": "heygen-com/hyperframes",
       "description": "AI video you can actually edit. HyperFrames is a free, open-source AI video editor. Describe any video and get a real project you can change down to the frame.",
       "language": "TypeScript",
-      "stars": 87304,
+      "stars": 87649,
       "archived": false
     },
     {
       "repo": "stickerdaniel/linkedin-mcp-server",
       "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
       "language": "Python",
-      "stars": 4265,
+      "stars": 4269,
       "archived": false
     },
     {
       "repo": "skylot/jadx",
       "description": "Dex to Java decompiler",
       "language": "Java",
-      "stars": 51912,
+      "stars": 51923,
       "archived": false
     },
     {
       "repo": "SYSTRAN/faster-whisper",
       "description": "Faster Whisper transcription with CTranslate2",
       "language": "Python",
-      "stars": 26895,
+      "stars": 26922,
       "archived": false
     },
     {
       "repo": "Leonxlnx/earshot",
-      "description": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
+      "description": "Sound effects for coding agents: ask in plain words and earshot renders the sound in code. CPU-only, no audio model, open source.",
       "language": "Python",
-      "stars": 5292,
+      "stars": 5412,
       "archived": false
     },
     {
@@ -216,91 +216,91 @@
       "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
       "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
       "language": "TypeScript",
-      "stars": 906,
+      "stars": 910,
       "archived": false
     },
     {
       "repo": "morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 470996,
+      "stars": 472106,
       "archived": false
     },
     {
       "repo": "feitangyuan/onetake",
       "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
       "language": "Python",
-      "stars": 4271,
+      "stars": 4290,
       "archived": false
     },
     {
       "repo": "harry0703/MoneyPrinterTurbo",
       "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
       "language": "Python",
-      "stars": 144791,
+      "stars": 144903,
       "archived": false
     },
     {
       "repo": "takaakit/superpowers-uml",
       "description": "Superpowers-UML modifies Superpowers to ensure a software development workflow in which AI agents design through UML modeling.",
       "language": "JavaScript",
-      "stars": 12,
+      "stars": 13,
       "archived": false
     },
     {
       "repo": "FareedKhan-dev/train-llm-from-scratch",
       "description": "A straightforward method for training your LLM, from downloading data to generating text.",
       "language": "Python",
-      "stars": 13277,
+      "stars": 13281,
       "archived": false
     },
     {
       "repo": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 264902,
+      "stars": 265097,
       "archived": false
     },
     {
       "repo": "headroomlabs-ai/headroom",
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
       "language": "Python",
-      "stars": 80197,
+      "stars": 80237,
       "archived": false
     },
     {
       "repo": "alirezarezvani/claude-skills",
       "description": "410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
       "language": "Python",
-      "stars": 30181,
+      "stars": 30214,
       "archived": false
     },
     {
       "repo": "Graphify-Labs/graphify",
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
       "language": "Python",
-      "stars": 150969,
+      "stars": 151392,
       "archived": false
     },
     {
       "repo": "nicedreamzapp/claude-code-local",
       "description": "Hit your Claude Code usage limit? Keep going free and offline on a local model: Qwen 3.8, Gemma 4, and Qwen 4 the day it ships. Runs on Apple Silicon Macs (MLX), Linux and Windows (llama.cpp) with no API key. Your code stays home.",
       "language": "Python",
-      "stars": 3523,
+      "stars": 3525,
       "archived": false
     },
     {
       "repo": "Z4nzu/hackingtool",
       "description": "ALL IN ONE Hacking Tool For Hackers",
       "language": "Python",
-      "stars": 82054,
+      "stars": 82080,
       "archived": false
     },
     {
       "repo": "microsoft/BitNet",
       "description": "Official inference framework for 1-bit LLMs",
       "language": "C++",
-      "stars": 42319,
+      "stars": 42357,
       "archived": false
     },
     {
@@ -314,7 +314,7 @@
       "repo": "evidentlyai/evidently",
       "description": "Evidently is ​​an open-source ML and LLM observability framework. Evaluate, test, and monitor any AI-powered system or data pipeline. From tabular data to Gen AI. 100+ metrics.",
       "language": "Jupyter Notebook",
-      "stars": 8075,
+      "stars": 8073,
       "archived": false
     },
     {
@@ -335,7 +335,7 @@
       "repo": "knadh/oat",
       "description": "Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library. ~10KB min+gz.",
       "language": "CSS",
-      "stars": 5614,
+      "stars": 5615,
       "archived": false
     },
     {
@@ -454,7 +454,7 @@
       "repo": "hedge-dev/UnleashedRecomp",
       "description": "An unofficial PC port of the Xbox 360 version of Sonic Unleashed created through the process of static recompilation.",
       "language": "C++",
-      "stars": 5399,
+      "stars": 5403,
       "archived": false
     }
   ]
