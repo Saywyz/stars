@@ -86,6 +86,14 @@
         {
           "repo": "phone-harness/mcp",
           "note": ""
+        },
+        {
+          "repo": "sweetrb/apple-mail-mcp",
+          "note": ""
+        },
+        {
+          "repo": "xDarkzx/Audacity-MCP",
+          "note": ""
         }
       ]
     },

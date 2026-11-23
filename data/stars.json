@@ -173,5 +173,19 @@
     "language": "Python",
     "stars": 31754,
     "archived": false
+  },
+  {
+    "repo": "sweetrb/apple-mail-mcp",
+    "description": "MCP server for Apple Mail - read, search, send, and manage emails via Claude and other AI assistants",
+    "language": "JavaScript",
+    "stars": 116,
+    "archived": false
+  },
+  {
+    "repo": "xDarkzx/Audacity-MCP",
+    "description": "AudacityMCP connects any MCP-compatible AI assistant to Audacity, giving it full control over audio editing through 144 tools and 9 pipelines spanning effects, cleanup, mastering, and more. Talk to your AI assistant and it edits your audio in real-time.",
+    "language": "Python",
+    "stars": 150,
+    "archived": false
   }
 ]
