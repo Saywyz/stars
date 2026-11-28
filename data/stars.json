@@ -3,70 +3,70 @@
     "repo": "heygen-com/hyperframes",
     "description": "Open-source AI video editor: edit your own footage, or create and remake any video with Claude Code, Codex or the free Studio app. Write HTML, render MP4. By HeyGen.",
     "language": "TypeScript",
-    "stars": 91236,
+    "stars": 91796,
     "archived": false
   },
   {
     "repo": "feitangyuan/onetake",
     "description": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
     "language": "Python",
-    "stars": 4523,
+    "stars": 4547,
     "archived": false
   },
   {
     "repo": "SYSTRAN/faster-whisper",
     "description": "Faster Whisper transcription with CTranslate2",
     "language": "Python",
-    "stars": 27061,
+    "stars": 27083,
     "archived": false
   },
   {
     "repo": "freemocap/freemocap",
     "description": "Free Motion Capture for Everyone 💀✨",
     "language": "TypeScript",
-    "stars": 10920,
+    "stars": 10926,
     "archived": false
   },
   {
     "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
     "description": "Adobe Premiere Pro MCP. Tools for AI-driven video editing via MCP, for Codex, Claude, and other MCP clients.",
     "language": "TypeScript",
-    "stars": 949,
+    "stars": 952,
     "archived": false
   },
   {
     "repo": "patch-gg/pixelfx",
     "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
     "language": "JavaScript",
-    "stars": 9595,
+    "stars": 9710,
     "archived": false
   },
   {
     "repo": "NousResearch/hermes-agent",
     "description": "The agent that grows with you",
     "language": "Python",
-    "stars": 266541,
+    "stars": 266672,
     "archived": false
   },
   {
     "repo": "Graphify-Labs/graphify",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "language": "Python",
-    "stars": 154089,
+    "stars": 154421,
     "archived": false
   },
   {
     "repo": "alirezarezvani/claude-skills",
     "description": "410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
     "language": "Python",
-    "stars": 30572,
+    "stars": 30602,
     "archived": false
   },
   {
     "repo": "gamedev-skills/awesome-gamedev-agent-skills",
     "description": "Make games with your AI coding agent: 79 game-dev skills and a router for Godot, Unity, Unreal, Roblox, three.js, Phaser and 6 more engines. Checked on the real engines.",
     "language": "Python",
-    "stars": 11644,
+    "stars": 11846,
     "archived": false
   },
   {
@@ -80,21 +80,21 @@
     "repo": "erkamyaman/rust-anything",
     "description": "Rewrite your app in Rust, piece by piece, checked against the original at every step. Works with TypeScript, JavaScript, Python, Go, Ruby, Java, C, PHP, C#, Kotlin and PowerShell.",
     "language": "Rust",
-    "stars": 10565,
+    "stars": 10994,
     "archived": false
   },
   {
     "repo": "stickerdaniel/linkedin-mcp-server",
     "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI agent access to profiles, companies, jobs, and messages.",
     "language": "Python",
-    "stars": 4322,
+    "stars": 4330,
     "archived": false
   },
   {
     "repo": "Leonxlnx/earshot",
     "description": "Sound effects for coding agents: ask in plain words and earshot renders the sound in code. CPU-only, no audio model, open source.",
     "language": "Python",
-    "stars": 5929,
+    "stars": 5965,
     "archived": false
   },
   {
@@ -115,42 +115,42 @@
     "repo": "nickclyde/duckduckgo-mcp-server",
     "description": "A Model Context Protocol (MCP) server that provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
     "language": "Python",
-    "stars": 1591,
+    "stars": 1592,
     "archived": false
   },
   {
     "repo": "phone-harness/mcp",
     "description": "Connect AI agents to real iPhones and Androids",
     "language": "Python",
-    "stars": 844,
+    "stars": 845,
     "archived": false
   },
   {
     "repo": "morluto/rea",
     "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
     "language": "TypeScript",
-    "stars": 480577,
+    "stars": 481689,
     "archived": false
   },
   {
     "repo": "skylot/jadx",
     "description": "Dex to Java decompiler",
     "language": "Java",
-    "stars": 52060,
+    "stars": 52076,
     "archived": false
   },
   {
     "repo": "heydamir/unslop",
     "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
     "language": "JavaScript",
-    "stars": 22440,
+    "stars": 22853,
     "archived": false
   },
   {
     "repo": "miqdadbadjuber/anti-slop",
     "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
     "language": "JavaScript",
-    "stars": 10276,
+    "stars": 10321,
     "archived": false
   },
   {
@@ -164,28 +164,28 @@
     "repo": "zubair-trabzada/geo-seo-claude",
     "description": "GEO-first SEO skill for Claude Code. Comprehensive AI search optimization for any website — citability scoring, AI crawler analysis, brand authority, schema markup, platform-specific optimization, and PDF reports.  If you want learn how to sell this to real businesses, check out the skool community",
     "language": "Python",
-    "stars": 11886,
+    "stars": 11900,
     "archived": false
   },
   {
     "repo": "AgriciDaniel/claude-seo",
     "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
     "language": "Python",
-    "stars": 32768,
+    "stars": 32964,
     "archived": false
   },
   {
     "repo": "sweetrb/apple-mail-mcp",
     "description": "MCP server for Apple Mail - read, search, send, and manage emails via Claude and other AI assistants",
     "language": "JavaScript",
-    "stars": 121,
+    "stars": 123,
     "archived": false
   },
   {
     "repo": "xDarkzx/Audacity-MCP",
     "description": "AudacityMCP connects any MCP-compatible AI assistant to Audacity, giving it full control over audio editing through 144 tools and 9 pipelines spanning effects, cleanup, mastering, and more. Talk to your AI assistant and it edits your audio in real-time.",
     "language": "Python",
-    "stars": 154,
+    "stars": 156,
     "archived": false
   }
 ]
